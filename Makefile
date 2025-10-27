@@ -85,8 +85,8 @@ LD = $(TOOLPREFIX)ld
 OBJCOPY = $(TOOLPREFIX)objcopy
 OBJDUMP = $(TOOLPREFIX)objdump
 
-CFLAGS = -Wall -Werror -O -fno-omit-frame-pointer -ggdb -gdwarf-2
-
+#CFLAGS = -Wall -Werror -O -fno-omit-frame-pointer -ggdb -gdwarf-2
+CFLAGS = -Wall -Werror -O -fno-omit-frame-pointer -ggdb -gdwarf-2 -Wno-incompatible-pointer-types
 ifdef LAB
 LABUPPER = $(shell echo $(LAB) | tr a-z A-Z)
 XCFLAGS += -DSOL_$(LABUPPER) -DLAB_$(LABUPPER)
